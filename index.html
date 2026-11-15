@@ -60,6 +60,7 @@
     .btn-3d {
       transition: all 0.12s cubic-bezier(0.4, 0, 0.2, 1);
       position: relative;
+      cursor: pointer;
     }
     .btn-3d:active {
       transform: translateY(4px) !important;
@@ -144,8 +145,8 @@
       </div>
       <p id="modal-message" class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-6"></p>
       <div id="modal-actions" class="flex justify-end gap-3">
-        <button id="modal-cancel-btn" class="px-4 py-2.5 rounded-xl text-sm font-semibold bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 transition">Batal</button>
-        <button id="modal-confirm-btn" class="px-5 py-2.5 rounded-xl text-sm font-semibold bg-indigo-600 hover:bg-indigo-500 text-white shadow-lg shadow-indigo-500/30 transition">Ya, Lanjutkan</button>
+        <button type="button" id="modal-cancel-btn" class="px-4 py-2.5 rounded-xl text-sm font-semibold bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 transition">Batal</button>
+        <button type="button" id="modal-confirm-btn" class="px-5 py-2.5 rounded-xl text-sm font-semibold bg-indigo-600 hover:bg-indigo-500 text-white shadow-lg shadow-indigo-500/30 transition">Ya, Lanjutkan</button>
       </div>
     </div>
   </div>
@@ -181,12 +182,12 @@
         </div>
 
         <!-- Sound Toggle -->
-        <button id="toggle-sound-btn" title="Suara Efek 3D Claw" class="w-10 h-10 rounded-xl bg-slate-200/80 dark:bg-slate-800/90 hover:bg-slate-300 dark:hover:bg-slate-700 flex items-center justify-center text-slate-600 dark:text-slate-300 transition">
+        <button type="button" id="toggle-sound-btn" title="Suara Efek 3D Claw" class="w-10 h-10 rounded-xl bg-slate-200/80 dark:bg-slate-800/90 hover:bg-slate-300 dark:hover:bg-slate-700 flex items-center justify-center text-slate-600 dark:text-slate-300 transition">
           <i id="sound-icon" class="fa-solid fa-volume-high text-sm"></i>
         </button>
 
         <!-- Theme Toggle -->
-        <button id="toggle-theme-btn" title="Ganti Tema Terang/Gelap" class="w-10 h-10 rounded-xl bg-slate-200/80 dark:bg-slate-800/90 hover:bg-slate-300 dark:hover:bg-slate-700 flex items-center justify-center text-slate-600 dark:text-slate-300 transition">
+        <button type="button" id="toggle-theme-btn" title="Ganti Tema Terang/Gelap" class="w-10 h-10 rounded-xl bg-slate-200/80 dark:bg-slate-800/90 hover:bg-slate-300 dark:hover:bg-slate-700 flex items-center justify-center text-slate-600 dark:text-slate-300 transition">
           <i id="theme-icon" class="fa-solid fa-sun text-sm"></i>
         </button>
       </div>
@@ -243,19 +244,19 @@
 
     <!-- 3D Tactile Navigation Menu Tabs -->
     <nav aria-label="Menu Utama" class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-7">
-      <button data-tab="claw" class="nav-tab-btn btn-3d btn-3d-indigo flex items-center justify-center gap-2.5 py-3.5 px-4 rounded-2xl font-display font-bold text-sm bg-indigo-600 text-white">
+      <button type="button" data-tab="claw" class="nav-tab-btn btn-3d btn-3d-indigo flex items-center justify-center gap-2.5 py-3.5 px-4 rounded-2xl font-display font-bold text-sm bg-indigo-600 text-white">
         <i class="fa-solid fa-gamepad text-base"></i>
         <span>3D Claw & Acak</span>
       </button>
-      <button data-tab="absensi" class="nav-tab-btn btn-3d btn-3d-slate flex items-center justify-center gap-2.5 py-3.5 px-4 rounded-2xl font-display font-bold text-sm bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700">
+      <button type="button" data-tab="absensi" class="nav-tab-btn btn-3d btn-3d-slate flex items-center justify-center gap-2.5 py-3.5 px-4 rounded-2xl font-display font-bold text-sm bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700">
         <i class="fa-solid fa-clipboard-user text-base text-emerald-500"></i>
         <span>Absensi Siswa</span>
       </button>
-      <button data-tab="jurnal" class="nav-tab-btn btn-3d btn-3d-slate flex items-center justify-center gap-2.5 py-3.5 px-4 rounded-2xl font-display font-bold text-sm bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700">
+      <button type="button" data-tab="jurnal" class="nav-tab-btn btn-3d btn-3d-slate flex items-center justify-center gap-2.5 py-3.5 px-4 rounded-2xl font-display font-bold text-sm bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700">
         <i class="fa-solid fa-book-open text-base text-cyan-500"></i>
         <span>Jurnal Kelas</span>
       </button>
-      <button data-tab="siswa" class="nav-tab-btn btn-3d btn-3d-slate flex items-center justify-center gap-2.5 py-3.5 px-4 rounded-2xl font-display font-bold text-sm bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700">
+      <button type="button" data-tab="siswa" class="nav-tab-btn btn-3d btn-3d-slate flex items-center justify-center gap-2.5 py-3.5 px-4 rounded-2xl font-display font-bold text-sm bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700">
         <i class="fa-solid fa-users-gear text-base text-pink-500"></i>
         <span>Data Siswa (<span id="total-students-tab">0</span>)</span>
       </button>
@@ -304,10 +305,10 @@
                 <h3 id="winner-name" class="font-display font-bold text-2xl text-white mb-1">Nama Siswa</h3>
                 <p id="winner-status-text" class="text-xs text-slate-400 mb-5">Status Hari Ini: Hadir</p>
                 <div class="grid grid-cols-2 gap-2.5">
-                  <button id="winner-mark-hadir-btn" class="btn-3d btn-3d-emerald py-2.5 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs">
+                  <button type="button" id="winner-mark-hadir-btn" class="btn-3d btn-3d-emerald py-2.5 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs">
                     <i class="fa-solid fa-check mr-1"></i> Tandai Hadir
                   </button>
-                  <button id="winner-close-btn" class="btn-3d btn-3d-slate py-2.5 px-3 rounded-xl bg-slate-700 hover:bg-slate-600 text-white font-bold text-xs">
+                  <button type="button" id="winner-close-btn" class="btn-3d btn-3d-slate py-2.5 px-3 rounded-xl bg-slate-700 hover:bg-slate-600 text-white font-bold text-xs">
                     Main Lagi
                   </button>
                 </div>
@@ -328,23 +329,23 @@
             <div class="bg-slate-100 dark:bg-slate-950/80 border border-slate-200 dark:border-slate-800 rounded-2xl p-5 mb-5">
               <div class="grid grid-cols-3 gap-2.5 max-w-[210px] mx-auto">
                 <div></div>
-                <button id="claw-up" aria-label="Geser Belakang" class="btn-3d btn-3d-slate h-14 rounded-2xl bg-slate-800 hover:bg-slate-700 text-white flex items-center justify-center text-lg">
+                <button type="button" id="claw-up" aria-label="Geser Belakang" class="btn-3d btn-3d-slate h-14 rounded-2xl bg-slate-800 hover:bg-slate-700 text-white flex items-center justify-center text-lg">
                   <i class="fa-solid fa-arrow-up"></i>
                 </button>
                 <div></div>
 
-                <button id="claw-left" aria-label="Geser Kiri" class="btn-3d btn-3d-slate h-14 rounded-2xl bg-slate-800 hover:bg-slate-700 text-white flex items-center justify-center text-lg">
+                <button type="button" id="claw-left" aria-label="Geser Kiri" class="btn-3d btn-3d-slate h-14 rounded-2xl bg-slate-800 hover:bg-slate-700 text-white flex items-center justify-center text-lg">
                   <i class="fa-solid fa-arrow-left"></i>
                 </button>
-                <button id="claw-center" title="Reset Posisi Tengah" class="btn-3d btn-3d-slate h-14 rounded-2xl bg-indigo-950 hover:bg-indigo-900 text-indigo-300 flex items-center justify-center text-xs font-bold">
+                <button type="button" id="claw-center" title="Reset Posisi Tengah" class="btn-3d btn-3d-slate h-14 rounded-2xl bg-indigo-950 hover:bg-indigo-900 text-indigo-300 flex items-center justify-center text-xs font-bold">
                   CENTER
                 </button>
-                <button id="claw-right" aria-label="Geser Kanan" class="btn-3d btn-3d-slate h-14 rounded-2xl bg-slate-800 hover:bg-slate-700 text-white flex items-center justify-center text-lg">
+                <button type="button" id="claw-right" aria-label="Geser Kanan" class="btn-3d btn-3d-slate h-14 rounded-2xl bg-slate-800 hover:bg-slate-700 text-white flex items-center justify-center text-lg">
                   <i class="fa-solid fa-arrow-right"></i>
                 </button>
 
                 <div></div>
-                <button id="claw-down" aria-label="Geser Depan" class="btn-3d btn-3d-slate h-14 rounded-2xl bg-slate-800 hover:bg-slate-700 text-white flex items-center justify-center text-lg">
+                <button type="button" id="claw-down" aria-label="Geser Depan" class="btn-3d btn-3d-slate h-14 rounded-2xl bg-slate-800 hover:bg-slate-700 text-white flex items-center justify-center text-lg">
                   <i class="fa-solid fa-arrow-down"></i>
                 </button>
                 <div></div>
@@ -355,11 +356,11 @@
 
           <!-- Big Red/Pink Arcade Drop Button -->
           <div class="space-y-3">
-            <button id="claw-drop-btn" class="w-full btn-3d btn-3d-pink py-4 px-6 rounded-2xl bg-gradient-to-r from-pink-600 via-rose-500 to-orange-500 hover:from-pink-500 hover:to-orange-400 text-white font-display font-bold text-base tracking-wide flex items-center justify-center gap-3">
+            <button type="button" id="claw-drop-btn" class="w-full btn-3d btn-3d-pink py-4 px-6 rounded-2xl bg-gradient-to-r from-pink-600 via-rose-500 to-orange-500 hover:from-pink-500 hover:to-orange-400 text-white font-display font-bold text-base tracking-wide flex items-center justify-center gap-3">
               <i class="fa-solid fa-hand-back-fist text-xl"></i>
               <span>TURUNKAN CAPIT (DROP!)</span>
             </button>
-            <button id="claw-auto-random-btn" class="w-full py-2.5 px-4 rounded-xl bg-slate-200/80 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-xs font-semibold text-slate-700 dark:text-slate-300 transition flex items-center justify-center gap-2">
+            <button type="button" id="claw-auto-random-btn" class="w-full py-2.5 px-4 rounded-xl bg-slate-200/80 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-xs font-semibold text-slate-700 dark:text-slate-300 transition flex items-center justify-center gap-2">
               <i class="fa-solid fa-shuffle text-indigo-400"></i>
               <span>Gerak Otomatis & Capit Acak</span>
             </button>
@@ -382,11 +383,11 @@
           </div>
 
           <div class="flex flex-wrap items-center gap-2.5">
-            <button id="mark-all-hadir-btn" class="btn-3d btn-3d-emerald px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold flex items-center gap-2">
+            <button type="button" id="mark-all-hadir-btn" class="btn-3d btn-3d-emerald px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold flex items-center gap-2">
               <i class="fa-solid fa-check-double"></i>
               <span>Hadir Semua</span>
             </button>
-            <button id="copy-absensi-wa-btn" class="btn-3d btn-3d-indigo px-4 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold flex items-center gap-2">
+            <button type="button" id="copy-absensi-wa-btn" class="btn-3d btn-3d-indigo px-4 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold flex items-center gap-2">
               <i class="fa-brands fa-whatsapp text-sm"></i>
               <span>Salin Rekap WA</span>
             </button>
@@ -486,7 +487,7 @@
             <div class="flex items-center gap-2">
               <input id="journal-search" type="text" placeholder="Cari mapel/materi..."
                 class="px-3.5 py-2 rounded-xl text-xs bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 w-44" />
-              <button id="copy-journals-btn" title="Salin Semua Jurnal" class="px-3 py-2 rounded-xl bg-cyan-500/15 text-cyan-500 hover:bg-cyan-500/25 text-xs font-bold transition">
+              <button type="button" id="copy-journals-btn" title="Salin Semua Jurnal" class="px-3 py-2 rounded-xl bg-cyan-500/15 text-cyan-500 hover:bg-cyan-500/25 text-xs font-bold transition">
                 <i class="fa-solid fa-copy mr-1"></i> Salin
               </button>
             </div>
@@ -541,7 +542,7 @@
 
           <div class="mt-6 pt-5 border-t border-slate-200 dark:border-slate-800">
             <p class="text-xs text-slate-500 dark:text-slate-400 mb-2.5">Ingin mencoba fitur dengan cepat?</p>
-            <button id="seed-sample-students-btn" class="w-full py-2.5 px-4 rounded-xl bg-indigo-500/15 hover:bg-indigo-500/25 text-indigo-500 dark:text-indigo-300 border border-indigo-500/25 text-xs font-bold transition">
+            <button type="button" id="seed-sample-students-btn" class="w-full py-2.5 px-4 rounded-xl bg-indigo-500/15 hover:bg-indigo-500/25 text-indigo-500 dark:text-indigo-300 border border-indigo-500/25 text-xs font-bold transition">
               <i class="fa-solid fa-wand-magic-sparkles mr-1.5"></i> Isi 8 Data Siswa Contoh
             </button>
           </div>
@@ -571,12 +572,12 @@
   <!-- ======================================================================= -->
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
-    import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+    import { getAuth, signInAnonymously, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
     import { getFirestore, doc, setDoc, addDoc, updateDoc, deleteDoc, onSnapshot, collection } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
     /**
      * =========================================================================
-     * 1. KONFIGURASI FIREBASE (UNTUK DEPLOY KE GITHUB & VERCEL)
+     * 1. KONFIGURASI FIREBASE
      * =========================================================================
      */
     const firebaseConfig = {
@@ -588,31 +589,1235 @@
       appId: "1:3976826964:web:a845e021537fafbbfc5dc1"
     };
 
-    // Deteksi otomatis apakah berjalan di environment sandbox atau Vercel/GitHub mandiri
     const hasEnvFirebase = typeof __firebase_config !== 'undefined';
-    const hasCustomFirebase = Boolean(firebaseConfig.apiKey && !firebaseConfig.apiKey.startsWith("MASUKKAN_"));
-
     const activeFirebaseConfig = hasEnvFirebase ? JSON.parse(__firebase_config) : firebaseConfig;
     const appId = typeof __app_id !== 'undefined' ? __app_id : 'classclaw-3d-prod';
-// ... existing code ... -->
+
+    // Application State
+    let db = null;
+    let auth = null;
+    let currentUser = null;
+    let isCloudConnected = false;
+
+    const todayStr = new Date().toISOString().split('T')[0];
+    const state = {
+      activeTab: 'claw',
+      activeDate: todayStr,
+      className: 'Kelas XII IPA 1',
+      students: [],
+      attendanceRecords: {}, // Map of dateStr -> { [studentId]: 'Hadir'|'Sakit'|'Izin'|'Alpa' }
+      journals: [],
+      soundEnabled: true,
+      selectedWinnerStudent: null
+    };
+
+    // Set initial dates immediately so UI is responsive right away
+    const activeDatePicker = document.getElementById('active-date-picker');
+    const journalDateInput = document.getElementById('journal-date');
+    const absensiDateLabel = document.getElementById('absensi-date-label');
+    activeDatePicker.value = state.activeDate;
+    journalDateInput.value = state.activeDate;
+    absensiDateLabel.textContent = formatDisplayDate(state.activeDate);
+
+    /**
+     * =========================================================================
+     * 2. AUDIO ENGINE (TONE.JS ARCADE SOUND EFFECTS)
+     * =========================================================================
+     */
+    let synth = null;
+    function playSound(type) {
+      if (!state.soundEnabled || typeof Tone === 'undefined') return;
+      try {
+        if (Tone.context.state !== 'running') {
+          Tone.start();
+        }
+        if (!synth) {
+          synth = new Tone.PolySynth(Tone.Synth).toDestination();
+          synth.volume.value = -12;
+        }
+        const now = Tone.now();
+        if (type === 'move') {
+          synth.triggerAttackRelease('C5', '32n', now);
+        } else if (type === 'drop') {
+          synth.triggerAttackRelease(['G4', 'E4', 'C4'], '16n', now);
+        } else if (type === 'win') {
+          synth.triggerAttackRelease('C5', '16n', now);
+          synth.triggerAttackRelease('E5', '16n', now + 0.08);
+          synth.triggerAttackRelease('G5', '16n', now + 0.16);
+          synth.triggerAttackRelease('C6', '8n', now + 0.24);
+        } else if (type === 'click') {
+          synth.triggerAttackRelease('A5', '64n', now);
+        }
+      } catch (e) {
+        // Ignore audio context restrictions if not yet interacted
+      }
+    }
+
+    /**
+     * =========================================================================
+     * 3. UI UTILITIES (TOASTS, CUSTOM MODAL, CLIPBOARD, FORMATTING)
+     * =========================================================================
+     */
+    function showToast(message, type = 'info') {
+      const container = document.getElementById('toast-container');
+      const toast = document.createElement('div');
+      const colors = {
+        success: 'bg-emerald-600 text-white border-emerald-400',
+        error: 'bg-rose-600 text-white border-rose-400',
+        info: 'bg-slate-800 text-white border-indigo-500'
+      };
+      const icons = {
+        success: 'fa-circle-check',
+        error: 'fa-triangle-exclamation',
+        info: 'fa-circle-info'
+      };
+      toast.className = `pointer-events-auto flex items-center gap-3 px-4 py-3 rounded-2xl shadow-xl border text-xs font-semibold transform transition-all duration-300 translate-y-2 opacity-0 ${colors[type] || colors.info}`;
+      toast.innerHTML = `<i class="fa-solid ${icons[type] || icons.info} text-base"></i><span>${escapeHtml(message)}</span>`;
+      container.appendChild(toast);
+
+      requestAnimationFrame(() => {
+        toast.classList.remove('translate-y-2', 'opacity-0');
+      });
+
+      setTimeout(() => {
+        toast.classList.add('opacity-0', 'translate-y-2');
+        setTimeout(() => toast.remove(), 300);
+      }, 3200);
+    }
+
+    function showConfirmModal({ title, message, confirmText = 'Ya, Lanjutkan', isDanger = false }) {
+      return new Promise((resolve) => {
+        const modal = document.getElementById('custom-modal');
+        const titleEl = document.getElementById('modal-title');
+        const msgEl = document.getElementById('modal-message');
+        const iconBox = document.getElementById('modal-icon-box');
+        const confirmBtn = document.getElementById('modal-confirm-btn');
+        const cancelBtn = document.getElementById('modal-cancel-btn');
+
+        titleEl.textContent = title;
+        msgEl.textContent = message;
+        confirmBtn.textContent = confirmText;
+
+        if (isDanger) {
+          iconBox.className = 'w-11 h-11 rounded-2xl bg-rose-500/15 text-rose-500 flex items-center justify-center text-xl';
+          iconBox.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
+          confirmBtn.className = 'px-5 py-2.5 rounded-xl text-sm font-semibold bg-rose-600 hover:bg-rose-500 text-white shadow-lg shadow-rose-500/30 transition';
+        } else {
+          iconBox.className = 'w-11 h-11 rounded-2xl bg-indigo-500/15 text-indigo-500 flex items-center justify-center text-xl';
+          iconBox.innerHTML = '<i class="fa-solid fa-circle-info"></i>';
+          confirmBtn.className = 'px-5 py-2.5 rounded-xl text-sm font-semibold bg-indigo-600 hover:bg-indigo-500 text-white shadow-lg shadow-indigo-500/30 transition';
+        }
+
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+
+        const cleanup = (result) => {
+          modal.classList.add('hidden');
+          modal.classList.remove('flex');
+          confirmBtn.onclick = null;
+          cancelBtn.onclick = null;
+          resolve(result);
+        };
+
+        confirmBtn.onclick = () => cleanup(true);
+        cancelBtn.onclick = () => cleanup(false);
+      });
+    }
+
+    function copyTextToClipboard(text, successMsg) {
+      const helper = document.getElementById('clipboard-helper');
+      helper.value = text;
+      helper.select();
+      helper.setSelectionRange(0, 99999);
+      try {
+        document.execCommand('copy');
+        showToast(successMsg, 'success');
+      } catch (err) {
+        showToast('Gagal menyalin teks ke clipboard', 'error');
+      }
+    }
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    function formatDisplayDate(dateStr) {
+      if (!dateStr) return '-';
+      const parts = dateStr.split('-');
+      if (parts.length !== 3) return dateStr;
+      const months = ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Agu', 'Sep', 'Okt', 'Nov', 'Des'];
+      return `${parts[2]} ${months[parseInt(parts[1], 10) - 1] || parts[1]} ${parts[0]}`;
+    }
+
+    /**
+     * =========================================================================
+     * 4. NAVIGATION TABS & HEADER CONTROLS
+     * =========================================================================
+     */
+    function switchTab(tabName) {
+      state.activeTab = tabName;
+      playSound('click');
+
+      document.querySelectorAll('.nav-tab-btn').forEach((btn) => {
+        const isTarget = btn.getAttribute('data-tab') === tabName;
+        if (isTarget) {
+          btn.className = 'nav-tab-btn btn-3d btn-3d-indigo flex items-center justify-center gap-2.5 py-3.5 px-4 rounded-2xl font-display font-bold text-sm bg-indigo-600 text-white';
+        } else {
+          btn.className = 'nav-tab-btn btn-3d btn-3d-slate flex items-center justify-center gap-2.5 py-3.5 px-4 rounded-2xl font-display font-bold text-sm bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700';
+        }
+      });
+
+      document.querySelectorAll('.tab-section').forEach((sec) => {
+        if (sec.id === `tab-${tabName}`) {
+          sec.classList.remove('hidden');
+        } else {
+          sec.classList.add('hidden');
+        }
+      });
+
+      if (tabName === 'claw') {
+        resizeThreeCanvas();
+      }
+    }
+
+    // Bind Tab Buttons
+    document.querySelectorAll('.nav-tab-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const target = btn.getAttribute('data-tab');
+        switchTab(target);
+      });
+    });
+
+    // Sound Toggle
+    document.getElementById('toggle-sound-btn').addEventListener('click', () => {
+      state.soundEnabled = !state.soundEnabled;
+      const icon = document.getElementById('sound-icon');
+      icon.className = state.soundEnabled ? 'fa-solid fa-volume-high text-sm' : 'fa-solid fa-volume-xmark text-sm text-rose-400';
+      showToast(state.soundEnabled ? 'Suara Arcade Aktif' : 'Suara Dimatikan', 'info');
+    });
+
+    // Theme Toggle
+    document.getElementById('toggle-theme-btn').addEventListener('click', () => {
+      const htmlEl = document.documentElement;
+      const isDark = htmlEl.classList.toggle('dark');
+      const icon = document.getElementById('theme-icon');
+      icon.className = isDark ? 'fa-solid fa-sun text-sm' : 'fa-solid fa-moon text-sm';
+    });
+
+    // Date Picker Change
+    activeDatePicker.addEventListener('change', (e) => {
+      state.activeDate = e.target.value || todayStr;
+      absensiDateLabel.textContent = formatDisplayDate(state.activeDate);
+      journalDateInput.value = state.activeDate;
+      renderAllUI();
+    });
+
+    // Class Name Change
+    let classSaveTimeout = null;
+    document.getElementById('class-name-input').addEventListener('input', (e) => {
+      state.className = e.target.value.trim() || 'Kelas XII IPA 1';
+      clearTimeout(classSaveTimeout);
+      classSaveTimeout = setTimeout(async () => {
+        if (isCloudConnected && db && currentUser) {
+          try {
+            const settingsRef = doc(db, 'artifacts', appId, 'public', 'data', 'settings', 'classInfo');
+            await setDoc(settingsRef, { className: state.className }, { merge: true });
+          } catch (err) {
+            console.warn('Gagal menyimpan nama kelas:', err);
+          }
+        }
+      }, 600);
+    });
+
+    /**
+     * =========================================================================
+     * 5. THREE.JS 3D CLAW MACHINE ENGINE
+     * =========================================================================
+     */
+    let scene, camera, renderer, clawGroup, leftFinger, rightFinger, backFinger, cableMesh;
+    let capsuleMeshes = [];
+    let clawTargetX = 0;
+    let clawTargetZ = 0;
+    let clawCurrentX = 0;
+    let clawCurrentZ = 0;
+    let clawDropY = 2.6;
+    let clawState = 'IDLE'; // 'IDLE' | 'DROPPING' | 'GRABBING' | 'RISING'
+    let fingerAngle = 0.45;
+    let grabbedCapsule = null;
+
+    // Camera Orbit State
+    let camTheta = 0.45;
+    let camPhi = 1.08;
+    let camRadius = 9.2;
+    let isDraggingCam = false;
+    let prevPointerX = 0;
+    let prevPointerY = 0;
+
+    function initThreeClaw() {
+      const wrapper = document.getElementById('claw-canvas-wrapper');
+      if (!wrapper || typeof THREE === 'undefined') return;
+
+      scene = new THREE.Scene();
+      scene.background = new THREE.Color(0x060a14);
+      scene.fog = new THREE.FogExp2(0x060a14, 0.045);
+
+      const width = wrapper.clientWidth || 600;
+      const height = wrapper.clientHeight || 400;
+      camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 100);
+      updateCameraPosition();
+
+      renderer = new THREE.WebGLRenderer({ antialias: true, powerPreference: 'high-performance' });
+      renderer.setSize(width, height);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      renderer.shadowMap.enabled = true;
+      wrapper.insertBefore(renderer.domElement, wrapper.firstChild);
+
+      // Lighting
+      const ambientLight = new THREE.AmbientLight(0x94a3b8, 0.85);
+      scene.add(ambientLight);
+
+      const topSpot = new THREE.SpotLight(0x818cf8, 2.2);
+      topSpot.position.set(0, 8, 0);
+      topSpot.angle = Math.PI / 3;
+      topSpot.penumbra = 0.5;
+      topSpot.castShadow = true;
+      scene.add(topSpot);
+
+      const cyanLight = new THREE.PointLight(0x06b6d4, 1.4, 12);
+      cyanLight.position.set(-3.5, 3, 3.5);
+      scene.add(cyanLight);
+
+      const pinkLight = new THREE.PointLight(0xec4899, 1.4, 12);
+      pinkLight.position.set(3.5, 3, -3.5);
+      scene.add(pinkLight);
+
+      // Arcade Pit Floor
+      const floorGeo = new THREE.BoxGeometry(5.6, 0.3, 5.6);
+      const floorMat = new THREE.MeshStandardMaterial({ color: 0x0f172a, roughness: 0.4, metalness: 0.6 });
+      const floor = new THREE.Mesh(floorGeo, floorMat);
+      floor.position.y = -0.15;
+      floor.receiveShadow = true;
+      scene.add(floor);
+
+      const gridHelper = new THREE.GridHelper(5.4, 12, 0x6366f1, 0x1e293b);
+      gridHelper.position.y = 0.01;
+      scene.add(gridHelper);
+
+      // Neon Corner Pillars & Top Frame
+      const pillarGeo = new THREE.CylinderGeometry(0.08, 0.08, 3.6, 16);
+      const pillarMat = new THREE.MeshStandardMaterial({ color: 0x38bdf8, emissive: 0x0284c7, emissiveIntensity: 0.7 });
+      const corners = [[-2.7, -2.7], [2.7, -2.7], [-2.7, 2.7], [2.7, 2.7]];
+      corners.forEach(([cx, cz]) => {
+        const pillar = new THREE.Mesh(pillarGeo, pillarMat);
+        pillar.position.set(cx, 1.8, cz);
+        scene.add(pillar);
+      });
+
+      // Top Gantry Frame
+      const topFrameGeo = new THREE.BoxGeometry(5.6, 0.16, 5.6);
+      const topFrameMat = new THREE.MeshStandardMaterial({ color: 0x1e1b4b, wireframe: true });
+      const topFrame = new THREE.Mesh(topFrameGeo, topFrameMat);
+      topFrame.position.y = 3.6;
+      scene.add(topFrame);
+
+      // Claw Assembly
+      clawGroup = new THREE.Group();
+      clawGroup.position.set(0, clawDropY, 0);
+      scene.add(clawGroup);
+
+      // Cable extending up to gantry
+      const cableGeo = new THREE.CylinderGeometry(0.035, 0.035, 4, 8);
+      const cableMat = new THREE.MeshStandardMaterial({ color: 0x94a3b8, metalness: 0.9, roughness: 0.2 });
+      cableMesh = new THREE.Mesh(cableGeo, cableMat);
+      cableMesh.position.y = 2.0;
+      clawGroup.add(cableMesh);
+
+      // Claw Core Hub
+      const hubGeo = new THREE.CylinderGeometry(0.28, 0.35, 0.35, 16);
+      const hubMat = new THREE.MeshStandardMaterial({ color: 0x6366f1, metalness: 0.7, roughness: 0.2 });
+      const hub = new THREE.Mesh(hubGeo, hubMat);
+      clawGroup.add(hub);
+
+      // Glowing Energy Core
+      const coreGeo = new THREE.SphereGeometry(0.18, 16, 16);
+      const coreMat = new THREE.MeshBasicMaterial({ color: 0x22d3ee });
+      const core = new THREE.Mesh(coreGeo, coreMat);
+      core.position.y = -0.18;
+      clawGroup.add(core);
+
+      // Create 3 Mechanical Prongs
+      function createProng(rotY) {
+        const pivot = new THREE.Group();
+        pivot.rotation.y = rotY;
+
+        const armMat = new THREE.MeshStandardMaterial({ color: 0xe2e8f0, metalness: 0.85, roughness: 0.15 });
+        const upperArm = new THREE.Mesh(new THREE.BoxGeometry(0.09, 0.55, 0.09), armMat);
+        upperArm.position.set(0.24, -0.25, 0);
+        upperArm.rotation.z = 0.35;
+        pivot.add(upperArm);
+
+        const lowerArm = new THREE.Mesh(new THREE.BoxGeometry(0.08, 0.5, 0.08), armMat);
+        lowerArm.position.set(0.25, -0.68, 0);
+        lowerArm.rotation.z = -0.35;
+        pivot.add(lowerArm);
+
+        clawGroup.add(pivot);
+        return pivot;
+      }
+
+      leftFinger = createProng(0);
+      rightFinger = createProng((Math.PI * 2) / 3);
+      backFinger = createProng((Math.PI * 4) / 3);
+
+      // Pointer & Touch Orbit Events
+      const domEl = renderer.domElement;
+      domEl.addEventListener('pointerdown', (e) => {
+        isDraggingCam = true;
+        prevPointerX = e.clientX;
+        prevPointerY = e.clientY;
+      });
+      window.addEventListener('pointermove', (e) => {
+        if (!isDraggingCam) return;
+        const dx = e.clientX - prevPointerX;
+        const dy = e.clientY - prevPointerY;
+        prevPointerX = e.clientX;
+        prevPointerY = e.clientY;
+        camTheta -= dx * 0.008;
+        camPhi = Math.max(0.35, Math.min(1.42, camPhi - dy * 0.008));
+        updateCameraPosition();
+      });
+      window.addEventListener('pointerup', () => {
+        isDraggingCam = false;
+      });
+
+      window.addEventListener('resize', resizeThreeCanvas);
+      rebuild3DCapsules();
+    }
+
+    function updateCameraPosition() {
+      if (!camera) return;
+      camera.position.x = camRadius * Math.sin(camPhi) * Math.sin(camTheta);
+      camera.position.y = camRadius * Math.cos(camPhi) + 1.2;
+      camera.position.z = camRadius * Math.sin(camPhi) * Math.cos(camTheta);
+      camera.lookAt(0, 1.0, 0);
+    }
+
+    function resizeThreeCanvas() {
+      const wrapper = document.getElementById('claw-canvas-wrapper');
+      if (!wrapper || !renderer || !camera) return;
+      const width = wrapper.clientWidth;
+      const height = wrapper.clientHeight;
+      if (width > 0 && height > 0) {
+        camera.aspect = width / height;
+        camera.updateProjectionMatrix();
+        renderer.setSize(width, height);
+      }
+    }
+
+    function createCapsuleTexture(number, name, statusColorHex) {
+      const canvas = document.createElement('canvas');
+      canvas.width = 256;
+      canvas.height = 256;
+      const ctx = canvas.getContext('2d');
+
+      // Background capsule tint
+      ctx.fillStyle = statusColorHex;
+      ctx.fillRect(0, 0, 256, 256);
+
+      // Center white label band
+      ctx.fillStyle = 'rgba(15, 23, 42, 0.88)';
+      ctx.fillRect(0, 74, 256, 108);
+
+      // Student Number
+      ctx.fillStyle = '#38bdf8';
+      ctx.font = 'bold 42px sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText(`#${String(number).padStart(2, '0')}`, 128, 120);
+
+      // Student First Name
+      const shortName = (name || 'Siswa').split(' ')[0].slice(0, 11);
+      ctx.fillStyle = '#ffffff';
+      ctx.font = 'bold 28px sans-serif';
+      ctx.fillText(shortName, 128, 162);
+
+      const tex = new THREE.CanvasTexture(canvas);
+      return tex;
+    }
+
+    function rebuild3DCapsules() {
+      if (!scene) return;
+      capsuleMeshes.forEach((item) => scene.remove(item.mesh));
+      capsuleMeshes = [];
+
+      const todayAtt = state.attendanceRecords[state.activeDate] || {};
+      const list = state.students;
+      if (list.length === 0) return;
+
+      const cols = Math.ceil(Math.sqrt(list.length));
+      const spacing = Math.min(1.05, 4.4 / Math.max(cols, 1));
+
+      list.forEach((student, idx) => {
+        const status = todayAtt[student.id] || 'Belum';
+        let colorHex = '#6366f1'; // Indigo (Belum)
+        if (status === 'Hadir') colorHex = '#10b981';
+        else if (status === 'Sakit' || status === 'Izin') colorHex = '#f59e0b';
+        else if (status === 'Alpa') colorHex = '#f43f5e';
+
+        const tex = createCapsuleTexture(student.number, student.name, colorHex);
+        const geo = new THREE.SphereGeometry(0.36, 24, 24);
+        const mat = new THREE.MeshStandardMaterial({
+          map: tex,
+          roughness: 0.25,
+          metalness: 0.15
+        });
+        const mesh = new THREE.Mesh(geo, mat);
+
+        const row = Math.floor(idx / cols);
+        const col = idx % cols;
+        const offsetX = (col - (cols - 1) / 2) * spacing;
+        const offsetZ = (row - (Math.ceil(list.length / cols) - 1) / 2) * spacing;
+
+        mesh.position.set(offsetX, 0.36, offsetZ);
+        mesh.rotation.y = -Math.PI / 2;
+        mesh.castShadow = true;
+        scene.add(mesh);
+
+        capsuleMeshes.push({
+          student,
+          mesh,
+          baseX: offsetX,
+          baseZ: offsetZ,
+          phase: idx * 0.7
+        });
+      });
+    }
+
+    function moveClaw(dx, dz) {
+      if (clawState !== 'IDLE') return;
+      playSound('move');
+      clawTargetX = Math.max(-2.1, Math.min(2.1, clawTargetX + dx));
+      clawTargetZ = Math.max(-2.1, Math.min(2.1, clawTargetZ + dz));
+      document.getElementById('claw-hud-status').textContent = `Posisi Capit: X=${clawTargetX.toFixed(1)}, Z=${clawTargetZ.toFixed(1)}`;
+    }
+
+    function triggerClawDrop() {
+      if (clawState !== 'IDLE') return;
+      if (state.students.length === 0) {
+        showToast('Tambahkan data siswa terlebih dahulu di tab Data Siswa!', 'error');
+        switchTab('siswa');
+        return;
+      }
+      playSound('drop');
+      clawState = 'DROPPING';
+      grabbedCapsule = null;
+      document.getElementById('claw-hud-status').textContent = 'Menurunkan Capit...';
+    }
+
+    function triggerAutoRandomClaw() {
+      if (clawState !== 'IDLE') return;
+      if (state.students.length === 0) {
+        showToast('Tambahkan data siswa terlebih dahulu!', 'error');
+        switchTab('siswa');
+        return;
+      }
+      const randomItem = capsuleMeshes[Math.floor(Math.random() * capsuleMeshes.length)];
+      if (randomItem) {
+        clawTargetX = randomItem.baseX;
+        clawTargetZ = randomItem.baseZ;
+        document.getElementById('claw-hud-status').textContent = 'Mengarahkan ke target acak...';
+        playSound('move');
+        setTimeout(() => {
+          triggerClawDrop();
+        }, 550);
+      }
+    }
+
+    function showWinnerBanner(student) {
+      state.selectedWinnerStudent = student;
+      playSound('win');
+      const todayAtt = state.attendanceRecords[state.activeDate] || {};
+      const status = todayAtt[student.id] || 'Belum Diabsen';
+
+      document.getElementById('winner-number').textContent = `#${String(student.number).padStart(2, '0')}`;
+      document.getElementById('winner-name').textContent = student.name;
+      document.getElementById('winner-status-text').textContent = `Status Hari Ini (${formatDisplayDate(state.activeDate)}): ${status}`;
+
+      const banner = document.getElementById('claw-winner-banner');
+      banner.classList.remove('hidden');
+      document.getElementById('claw-hud-status').textContent = `Terpilih: ${student.name}`;
+    }
+
+    function animateLoop() {
+      requestAnimationFrame(animateLoop);
+      if (!renderer || !scene || !camera) return;
+
+      const time = Date.now() * 0.003;
+
+      // Gentle bobbing animation for capsules on the pit floor
+      capsuleMeshes.forEach((item) => {
+        if (grabbedCapsule !== item) {
+          item.mesh.position.x = item.baseX;
+          item.mesh.position.z = item.baseZ;
+          item.mesh.position.y = 0.36 + Math.sin(time + item.phase) * 0.03;
+        }
+      });
+
+      // Smooth horizontal claw movement
+      clawCurrentX += (clawTargetX - clawCurrentX) * 0.14;
+      clawCurrentZ += (clawTargetZ - clawCurrentZ) * 0.14;
+
+      if (clawState === 'DROPPING') {
+        clawDropY -= 0.06;
+        fingerAngle = Math.min(0.65, fingerAngle + 0.03);
+        if (clawDropY <= 0.85) {
+          clawDropY = 0.85;
+          clawState = 'GRABBING';
+          // Find closest capsule
+          let closest = null;
+          let minDist = Infinity;
+          capsuleMeshes.forEach((item) => {
+            const d = Math.hypot(item.baseX - clawCurrentX, item.baseZ - clawCurrentZ);
+            if (d < minDist) {
+              minDist = d;
+              closest = item;
+            }
+          });
+          grabbedCapsule = closest;
+        }
+      } else if (clawState === 'GRABBING') {
+        fingerAngle -= 0.04;
+        if (fingerAngle <= 0.12) {
+          fingerAngle = 0.12;
+          clawState = 'RISING';
+        }
+      } else if (clawState === 'RISING') {
+        clawDropY += 0.055;
+        if (grabbedCapsule) {
+          grabbedCapsule.mesh.position.set(clawCurrentX, clawDropY - 0.52, clawCurrentZ);
+        }
+        if (clawDropY >= 2.6) {
+          clawDropY = 2.6;
+          clawState = 'IDLE';
+          if (grabbedCapsule) {
+            const picked = grabbedCapsule.student;
+            setTimeout(() => {
+              showWinnerBanner(picked);
+              grabbedCapsule = null;
+              fingerAngle = 0.45;
+            }, 250);
+          }
+        }
+      }
+
+      if (clawGroup) {
+        clawGroup.position.set(clawCurrentX, clawDropY, clawCurrentZ);
+        if (leftFinger && rightFinger && backFinger) {
+          leftFinger.children[0].rotation.z = fingerAngle;
+          rightFinger.children[0].rotation.z = fingerAngle;
+          backFinger.children[0].rotation.z = fingerAngle;
+        }
+      }
+
+      renderer.render(scene, camera);
+    }
+
+    // Bind 3D Arcade Controls
+    document.getElementById('claw-up').addEventListener('click', () => moveClaw(0, -0.45));
+    document.getElementById('claw-down').addEventListener('click', () => moveClaw(0, 0.45));
+    document.getElementById('claw-left').addEventListener('click', () => moveClaw(-0.45, 0));
+    document.getElementById('claw-right').addEventListener('click', () => moveClaw(0.45, 0));
+    document.getElementById('claw-center').addEventListener('click', () => {
+      clawTargetX = 0;
+      clawTargetZ = 0;
+      playSound('move');
+      document.getElementById('claw-hud-status').textContent = 'Posisi Capit: Tengah (0, 0)';
+    });
+    document.getElementById('claw-drop-btn').addEventListener('click', triggerClawDrop);
+    document.getElementById('claw-auto-random-btn').addEventListener('click', triggerAutoRandomClaw);
+
+    // Winner Banner Controls
+    document.getElementById('winner-close-btn').addEventListener('click', () => {
+      document.getElementById('claw-winner-banner').classList.add('hidden');
+      state.selectedWinnerStudent = null;
+    });
+    document.getElementById('winner-mark-hadir-btn').addEventListener('click', async () => {
+      if (state.selectedWinnerStudent) {
+        await setStudentAttendance(state.selectedWinnerStudent.id, 'Hadir');
+        document.getElementById('claw-winner-banner').classList.add('hidden');
+        showToast(`${state.selectedWinnerStudent.name} ditandai Hadir!`, 'success');
+      }
+    });
+
+    // Keyboard Arrow Support for Claw
+    window.addEventListener('keydown', (e) => {
+      if (state.activeTab !== 'claw') return;
+      if (['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement?.tagName)) return;
+      if (e.key === 'ArrowUp') { e.preventDefault(); moveClaw(0, -0.4); }
+      else if (e.key === 'ArrowDown') { e.preventDefault(); moveClaw(0, 0.4); }
+      else if (e.key === 'ArrowLeft') { e.preventDefault(); moveClaw(-0.4, 0); }
+      else if (e.key === 'ArrowRight') { e.preventDefault(); moveClaw(0.4, 0); }
+      else if (e.key === ' ') { e.preventDefault(); triggerClawDrop(); }
+    });
+
+    /**
+     * =========================================================================
+     * 6. DATA & RENDERING: ABSENSI, JURNAL, DAN DATA SISWA
+     * =========================================================================
+     */
+    function renderAllUI() {
+      updateStatsSummary();
+      renderAttendanceList();
+      renderJournalList();
+      renderStudentRoster();
+      rebuild3DCapsules();
+    }
+
+    function updateStatsSummary() {
+      const todayAtt = state.attendanceRecords[state.activeDate] || {};
+      let hadir = 0, sakit = 0, izin = 0, alpa = 0;
+
+      state.students.forEach((s) => {
+        const st = todayAtt[s.id];
+        if (st === 'Hadir') hadir++;
+        else if (st === 'Sakit') sakit++;
+        else if (st === 'Izin') izin++;
+        else if (st === 'Alpa') alpa++;
+      });
+
+      document.getElementById('stat-hadir').textContent = hadir;
+      document.getElementById('stat-sakit').textContent = sakit;
+      document.getElementById('stat-izin').textContent = izin;
+      document.getElementById('stat-alpa').textContent = alpa;
+      document.getElementById('total-students-tab').textContent = state.students.length;
+      document.getElementById('roster-count-badge').textContent = `${state.students.length} Siswa`;
+
+      const total = state.students.length;
+      const pct = total > 0 ? Math.round((hadir / total) * 100) : 0;
+      document.getElementById('attendance-percentage-text').textContent = `${pct}% (${hadir}/${total} Siswa)`;
+      document.getElementById('attendance-progress-bar').style.width = `${pct}%`;
+    }
+
+    async function setStudentAttendance(studentId, status) {
+      if (!state.attendanceRecords[state.activeDate]) {
+        state.attendanceRecords[state.activeDate] = {};
+      }
+      state.attendanceRecords[state.activeDate][studentId] = status;
+      playSound('click');
+      renderAllUI();
+
+      if (isCloudConnected && db && currentUser) {
+        try {
+          const attDocRef = doc(db, 'artifacts', appId, 'public', 'data', 'attendance', state.activeDate);
+          await setDoc(attDocRef, {
+            date: state.activeDate,
+            records: state.attendanceRecords[state.activeDate]
+          }, { merge: true });
+        } catch (err) {
+          console.error('Gagal menyimpan absensi:', err);
+          showToast('Tersimpan lokal, gagal sinkron ke Cloud.', 'error');
+        }
+      }
+    }
+
+    function renderAttendanceList() {
+      const container = document.getElementById('attendance-list-container');
+      if (state.students.length === 0) {
+        container.innerHTML = `
+          <div class="text-center py-10 px-4 rounded-2xl border border-dashed border-slate-300 dark:border-slate-700">
+            <i class="fa-solid fa-users-slash text-3xl text-slate-400 mb-2"></i>
+            <p class="text-sm font-semibold text-slate-600 dark:text-slate-300">Belum ada data siswa di kelas ini</p>
+            <p class="text-xs text-slate-500 mt-1 mb-4">Silakan tambahkan siswa di menu Data Siswa terlebih dahulu.</p>
+            <button type="button" id="goto-siswa-empty-btn" class="px-4 py-2 rounded-xl bg-indigo-600 text-white text-xs font-bold">Buka Data Siswa</button>
+          </div>
+        `;
+        const btn = document.getElementById('goto-siswa-empty-btn');
+        if (btn) btn.addEventListener('click', () => switchTab('siswa'));
+        return;
+      }
+
+      const todayAtt = state.attendanceRecords[state.activeDate] || {};
+      const sortedStudents = [...state.students].sort((a, b) => Number(a.number) - Number(b.number));
+
+      container.innerHTML = sortedStudents.map((student) => {
+        const currentStatus = todayAtt[student.id] || '';
+        const statuses = [
+          { key: 'Hadir', label: 'Hadir', activeClass: 'bg-emerald-600 text-white border-emerald-500 shadow-md shadow-emerald-500/25' },
+          { key: 'Sakit', label: 'Sakit', activeClass: 'bg-amber-500 text-white border-amber-400 shadow-md shadow-amber-500/25' },
+          { key: 'Izin', label: 'Izin', activeClass: 'bg-sky-500 text-white border-sky-400 shadow-md shadow-sky-500/25' },
+          { key: 'Alpa', label: 'Alpa', activeClass: 'bg-rose-600 text-white border-rose-500 shadow-md shadow-rose-500/25' }
+        ];
+
+        const buttonsHtml = statuses.map((st) => {
+          const isSelected = currentStatus === st.key;
+          const cls = isSelected
+            ? st.activeClass
+            : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-slate-700 hover:bg-slate-200 dark:hover:bg-slate-700';
+          return `<button type="button" data-student-id="${escapeHtml(student.id)}" data-status="${st.key}" class="att-status-btn px-3 py-1.5 rounded-xl text-xs font-bold border transition ${cls}">${st.label}</button>`;
+        }).join('');
+
+        return `
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/70">
+            <div class="flex items-center gap-3">
+              <span class="w-9 h-9 rounded-xl bg-indigo-500/15 text-indigo-500 dark:text-indigo-300 font-display font-bold text-xs flex items-center justify-center shrink-0">
+                ${String(student.number).padStart(2, '0')}
+              </span>
+              <div>
+                <p class="font-bold text-sm text-slate-900 dark:text-white">${escapeHtml(student.name)}</p>
+                <p class="text-[11px] text-slate-500">${student.gender === 'P' ? 'Perempuan' : 'Laki-laki'}</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-1.5 flex-wrap">
+              ${buttonsHtml}
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      container.querySelectorAll('.att-status-btn').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const sId = btn.getAttribute('data-student-id');
+          const st = btn.getAttribute('data-status');
+          setStudentAttendance(sId, st);
+        });
+      });
+    }
+
+    // Bulk Mark All Hadir
+    document.getElementById('mark-all-hadir-btn').addEventListener('click', async () => {
+      if (state.students.length === 0) {
+        showToast('Belum ada data siswa!', 'error');
+        return;
+      }
+      if (!state.attendanceRecords[state.activeDate]) {
+        state.attendanceRecords[state.activeDate] = {};
+      }
+      state.students.forEach((s) => {
+        state.attendanceRecords[state.activeDate][s.id] = 'Hadir';
+      });
+      playSound('win');
+      renderAllUI();
+      showToast('Semua siswa ditandai Hadir!', 'success');
+
+      if (isCloudConnected && db && currentUser) {
+        try {
+          const attDocRef = doc(db, 'artifacts', appId, 'public', 'data', 'attendance', state.activeDate);
+          await setDoc(attDocRef, {
+            date: state.activeDate,
+            records: state.attendanceRecords[state.activeDate]
+          }, { merge: true });
+        } catch (err) {
+          console.error(err);
+        }
+      }
+    });
+
+    // Copy Attendance Recap for WhatsApp
+    document.getElementById('copy-absensi-wa-btn').addEventListener('click', () => {
+      const todayAtt = state.attendanceRecords[state.activeDate] || {};
+      const sorted = [...state.students].sort((a, b) => Number(a.number) - Number(b.number));
+      let hadir = 0, sakit = [], izin = [], alpa = [];
+
+      sorted.forEach((s) => {
+        const st = todayAtt[s.id] || 'Belum';
+        if (st === 'Hadir') hadir++;
+        else if (st === 'Sakit') sakit.push(s.name);
+        else if (st === 'Izin') izin.push(s.name);
+        else if (st === 'Alpa') alpa.push(s.name);
+      });
+
+      const text = `*REKAP ABSENSI ${state.className.toUpperCase()}*\nTanggal: ${formatDisplayDate(state.activeDate)}\nTotal Siswa: ${sorted.length}\n✅ Hadir: ${hadir}\n🤒 Sakit: ${sakit.length}${sakit.length ? ' (' + sakit.join(', ') + ')' : ''}\n📩 Izin: ${izin.length}${izin.length ? ' (' + izin.join(', ') + ')' : ''}\n❌ Alpa: ${alpa.length}${alpa.length ? ' (' + alpa.join(', ') + ')' : ''}`;
+      copyTextToClipboard(text, 'Rekap absensi WhatsApp berhasil disalin!');
+    });
+
+    /**
+     * =========================================================================
+     * JURNAL KELAS CRUD
+     * =========================================================================
+     */
+    const journalForm = document.getElementById('journal-form');
+    journalForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const editId = document.getElementById('journal-edit-id').value;
+      const payload = {
+        date: document.getElementById('journal-date').value,
+        hours: document.getElementById('journal-hours').value.trim(),
+        subject: document.getElementById('journal-subject').value.trim(),
+        topic: document.getElementById('journal-topic').value.trim(),
+        notes: document.getElementById('journal-notes').value.trim(),
+        teacher: document.getElementById('journal-teacher').value.trim(),
+        updatedAt: Date.now()
+      };
+
+      playSound('win');
+
+      if (editId) {
+        const idx = state.journals.findIndex((j) => j.id === editId);
+        if (idx !== -1) state.journals[idx] = { ...state.journals[idx], ...payload };
+        resetJournalForm();
+        renderJournalList();
+        showToast('Jurnal mengajar diperbarui!', 'success');
+
+        if (isCloudConnected && db && currentUser) {
+          try {
+            await updateDoc(doc(db, 'artifacts', appId, 'public', 'data', 'journals', editId), payload);
+          } catch (err) {
+            console.error(err);
+          }
+        }
+      } else {
+        const tempId = 'local_' + Date.now();
+        state.journals.unshift({ id: tempId, ...payload });
+        resetJournalForm();
+        renderJournalList();
+        showToast('Jurnal mengajar berhasil disimpan!', 'success');
+
+        if (isCloudConnected && db && currentUser) {
+          try {
+            await addDoc(collection(db, 'artifacts', appId, 'public', 'data', 'journals'), payload);
+          } catch (err) {
+            console.error(err);
+          }
+        }
+      }
+    });
+
+    function resetJournalForm() {
+      document.getElementById('journal-edit-id').value = '';
+      document.getElementById('journal-form-title').textContent = 'Catat Jurnal Mengajar';
+      document.getElementById('journal-submit-text').textContent = 'Simpan Jurnal';
+      document.getElementById('journal-cancel-edit-btn').classList.add('hidden');
+      document.getElementById('journal-hours').value = '';
+      document.getElementById('journal-subject').value = '';
+      document.getElementById('journal-topic').value = '';
+      document.getElementById('journal-notes').value = '';
+      document.getElementById('journal-date').value = state.activeDate;
+    }
+
+    document.getElementById('journal-cancel-edit-btn').addEventListener('click', resetJournalForm);
+    document.getElementById('journal-search').addEventListener('input', renderJournalList);
+
+    function renderJournalList() {
+      const container = document.getElementById('journal-list-container');
+      const queryStr = (document.getElementById('journal-search').value || '').toLowerCase();
+
+      const filtered = [...state.journals]
+        .sort((a, b) => (b.date || '').localeCompare(a.date || '') || (b.updatedAt || 0) - (a.updatedAt || 0))
+        .filter((j) =>
+          (j.subject || '').toLowerCase().includes(queryStr) ||
+          (j.topic || '').toLowerCase().includes(queryStr) ||
+          (j.teacher || '').toLowerCase().includes(queryStr)
+        );
+
+      if (filtered.length === 0) {
+        container.innerHTML = `
+          <div class="text-center py-12 px-4 rounded-2xl border border-dashed border-slate-300 dark:border-slate-700">
+            <i class="fa-solid fa-book-open text-3xl text-slate-400 mb-2"></i>
+            <p class="text-sm font-semibold text-slate-600 dark:text-slate-300">Belum ada catatan jurnal kelas</p>
+            <p class="text-xs text-slate-500 mt-1">Gunakan formulir di samping untuk menambahkan jurnal mengajar.</p>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = filtered.map((j) => `
+        <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/70 border border-slate-200 dark:border-slate-700/80 space-y-2">
+          <div class="flex items-start justify-between gap-2">
+            <div>
+              <div class="flex items-center gap-2 flex-wrap">
+                <span class="px-2.5 py-0.5 rounded-lg text-[11px] font-bold bg-cyan-500/15 text-cyan-500">
+                  ${formatDisplayDate(j.date)} • Jam ${escapeHtml(j.hours)}
+                </span>
+                <span class="font-display font-bold text-sm text-slate-900 dark:text-white">${escapeHtml(j.subject)}</span>
+              </div>
+              <p class="text-[11px] text-slate-500 mt-0.5"><i class="fa-solid fa-user-tie mr-1"></i> ${escapeHtml(j.teacher)}</p>
+            </div>
+            <div class="flex items-center gap-1.5 shrink-0">
+              <button type="button" data-edit-id="${escapeHtml(j.id)}" class="edit-journal-btn w-8 h-8 rounded-xl bg-indigo-500/15 text-indigo-400 hover:bg-indigo-500/25 flex items-center justify-center text-xs transition" title="Edit Jurnal">
+                <i class="fa-solid fa-pen"></i>
+              </button>
+              <button type="button" data-del-id="${escapeHtml(j.id)}" class="del-journal-btn w-8 h-8 rounded-xl bg-rose-500/15 text-rose-400 hover:bg-rose-500/25 flex items-center justify-center text-xs transition" title="Hapus Jurnal">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </div>
+          </div>
+          <p class="text-xs text-slate-700 dark:text-slate-200 leading-relaxed bg-white dark:bg-slate-900/70 p-3 rounded-xl border border-slate-200/60 dark:border-slate-700/50">
+            ${escapeHtml(j.topic)}
+          </p>
+          ${j.notes ? `<p class="text-[11px] text-amber-600 dark:text-amber-400"><i class="fa-solid fa-note-sticky mr-1"></i> Catatan: ${escapeHtml(j.notes)}</p>` : ''}
+        </div>
+      `).join('');
+
+      container.querySelectorAll('.edit-journal-btn').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const id = btn.getAttribute('data-edit-id');
+          const item = state.journals.find((x) => x.id === id);
+          if (!item) return;
+          document.getElementById('journal-edit-id').value = item.id;
+          document.getElementById('journal-date').value = item.date;
+          document.getElementById('journal-hours').value = item.hours;
+          document.getElementById('journal-subject').value = item.subject;
+          document.getElementById('journal-topic').value = item.topic;
+          document.getElementById('journal-notes').value = item.notes || '';
+          document.getElementById('journal-teacher').value = item.teacher;
+          document.getElementById('journal-form-title').textContent = 'Edit Jurnal Mengajar';
+          document.getElementById('journal-submit-text').textContent = 'Simpan Perubahan';
+          document.getElementById('journal-cancel-edit-btn').classList.remove('hidden');
+        });
+      });
+
+      container.querySelectorAll('.del-journal-btn').forEach((btn) => {
+        btn.addEventListener('click', async () => {
+          const id = btn.getAttribute('data-del-id');
+          const confirmed = await showConfirmModal({
+            title: 'Hapus Jurnal Kelas?',
+            message: 'Catatan jurnal pembelajaran ini akan dihapus permanen.',
+            confirmText: 'Ya, Hapus',
+            isDanger: true
+          });
+          if (!confirmed) return;
+
+          state.journals = state.journals.filter((x) => x.id !== id);
+          renderJournalList();
+          showToast('Jurnal berhasil dihapus', 'info');
+
+          if (isCloudConnected && db && currentUser && !id.startsWith('local_')) {
+            try {
+              await deleteDoc(doc(db, 'artifacts', appId, 'public', 'data', 'journals', id));
+            } catch (err) {
+              console.error(err);
+            }
+          }
+        });
+      });
+    }
+
+    document.getElementById('copy-journals-btn').addEventListener('click', () => {
+      if (state.journals.length === 0) {
+        showToast('Belum ada jurnal untuk disalin.', 'error');
+        return;
+      }
+      const lines = state.journals.map((j, idx) =>
+        `${idx + 1}. [${formatDisplayDate(j.date)} | Jam ${j.hours}] ${j.subject} (${j.teacher})\n   Materi: ${j.topic}${j.notes ? `\n   Catatan: ${j.notes}` : ''}`
+      );
+      copyTextToClipboard(`*ARSIP JURNAL ${state.className.toUpperCase()}*\n\n${lines.join('\n\n')}`, 'Semua arsip jurnal disalin!');
+    });
+
+    /**
+     * =========================================================================
+     * DATA SISWA CRUD & SAMPLE SEEDER
+     * =========================================================================
+     */
+    document.getElementById('student-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const numVal = parseInt(document.getElementById('student-number').value, 10);
+      const nameVal = document.getElementById('student-name').value.trim();
+      const genderVal = document.getElementById('student-gender').value;
+
+      if (!nameVal || isNaN(numVal)) return;
+
+      const newStudent = {
+        number: numVal,
+        name: nameVal,
+        gender: genderVal
+      };
+
+      playSound('win');
+      document.getElementById('student-name').value = '';
+      document.getElementById('student-number').value = numVal + 1;
+
+      if (isCloudConnected && db && currentUser) {
+        try {
+          await addDoc(collection(db, 'artifacts', appId, 'public', 'data', 'students'), newStudent);
+          showToast(`Siswa "${nameVal}" ditambahkan!`, 'success');
+        } catch (err) {
+          console.error(err);
+          showToast('Gagal menyimpan ke Cloud, disimpan lokal.', 'error');
+          state.students.push({ id: 'local_' + Date.now(), ...newStudent });
+          renderAllUI();
+        }
+      } else {
+        state.students.push({ id: 'local_' + Date.now(), ...newStudent });
+        renderAllUI();
+        showToast(`Siswa "${nameVal}" ditambahkan!`, 'success');
+      }
+    });
+
+    document.getElementById('seed-sample-students-btn').addEventListener('click', async () => {
+      const sampleList = [
+        { number: 1, name: 'Ahmad Fauzan Pratama', gender: 'L' },
+        { number: 2, name: 'Aisyah Putri Maharani', gender: 'P' },
+        { number: 3, name: 'Bagas Saputra Wijaya', gender: 'L' },
+        { number: 4, name: 'Citra Dewi Lestari', gender: 'P' },
+        { number: 5, name: 'Dimas Arya Nugraha', gender: 'L' },
+        { number: 6, name: 'Farah Nabila Azzahra', gender: 'P' },
+        { number: 7, name: 'Gilang Ramadhan', gender: 'L' },
+        { number: 8, name: 'Hana Salsabila', gender: 'P' }
+      ];
+
+      playSound('win');
+      showToast('Menambahkan 8 siswa contoh...', 'info');
+
+      if (isCloudConnected && db && currentUser) {
+        try {
+          for (const st of sampleList) {
+            await addDoc(collection(db, 'artifacts', appId, 'public', 'data', 'students'), st);
+          }
+          showToast('8 Data siswa contoh berhasil ditambahkan ke Cloud!', 'success');
+        } catch (err) {
+          console.error(err);
+        }
+      } else {
+        sampleList.forEach((st, i) => {
+          state.students.push({ id: 'sample_' + Date.now() + '_' + i, ...st });
+        });
+        renderAllUI();
+        showToast('8 Data siswa contoh ditambahkan!', 'success');
+      }
+    });
+
+    function renderStudentRoster() {
+      const container = document.getElementById('student-roster-container');
+      if (state.students.length === 0) {
+        container.innerHTML = `
+          <div class="sm:col-span-2 text-center py-12 px-4 rounded-2xl border border-dashed border-slate-300 dark:border-slate-700">
+            <i class="fa-solid fa-user-graduate text-3xl text-slate-400 mb-2"></i>
+            <p class="text-sm font-semibold text-slate-600 dark:text-slate-300">Daftar siswa masih kosong</p>
+            <p class="text-xs text-slate-500 mt-1">Tambahkan siswa di sebelah kiri atau klik tombol "Isi 8 Data Siswa Contoh".</p>
+          </div>
+        `;
+        return;
+      }
+
+      const sorted = [...state.students].sort((a, b) => Number(a.number) - Number(b.number));
+      container.innerHTML = sorted.map((s) => `
+        <div class="flex items-center justify-between gap-3 p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/70 border border-slate-200 dark:border-slate-700/70">
+          <div class="flex items-center gap-3 min-w-0">
+            <span class="w-9 h-9 rounded-xl ${s.gender === 'P' ? 'bg-pink-500/15 text-pink-500' : 'bg-cyan-500/15 text-cyan-500'} font-display font-bold text-xs flex items-center justify-center shrink-0">
+              ${String(s.number).padStart(2, '0')}
+            </span>
+            <div class="truncate">
+              <p class="font-bold text-sm text-slate-900 dark:text-white truncate">${escapeHtml(s.name)}</p>
+              <p class="text-[11px] text-slate-500">${s.gender === 'P' ? 'Perempuan (P)' : 'Laki-laki (L)'}</p>
+            </div>
+          </div>
+          <button type="button" data-del-student="${escapeHtml(s.id)}" class="del-student-btn w-8 h-8 rounded-xl bg-rose-500/15 text-rose-400 hover:bg-rose-500/25 flex items-center justify-center text-xs shrink-0 transition" title="Hapus Siswa">
+            <i class="fa-solid fa-trash"></i>
+          </button>
+        </div>
+      `).join('');
+
+      container.querySelectorAll('.del-student-btn').forEach((btn) => {
+        btn.addEventListener('click', async () => {
+          const id = btn.getAttribute('data-del-student');
+          const target = state.students.find((x) => x.id === id);
+          const confirmed = await showConfirmModal({
+            title: 'Hapus Data Siswa?',
+            message: `Siswa "${target ? target.name : ''}" akan dihapus dari daftar kelas dan mesin 3D Claw.`,
+            confirmText: 'Ya, Hapus',
+            isDanger: true
+          });
+          if (!confirmed) return;
+
+          state.students = state.students.filter((x) => x.id !== id);
+          renderAllUI();
+          showToast('Data siswa dihapus', 'info');
+
+          if (isCloudConnected && db && currentUser && !id.startsWith('local_') && !id.startsWith('sample_')) {
+            try {
+              await deleteDoc(doc(db, 'artifacts', appId, 'public', 'data', 'students', id));
+            } catch (err) {
+              console.error(err);
+            }
+          }
+        });
+      });
+    }
+
+    /**
+     * =========================================================================
+     * 7. FIREBASE AUTHENTICATION & REAL-TIME LISTENERS
+     * =========================================================================
+     */
+    async function initFirebase() {
+      const badge = document.getElementById('db-status-badge');
       try {
         const app = initializeApp(activeFirebaseConfig);
         auth = getAuth(app);
         db = getFirestore(app);
-// ... existing code ... -->
+
+        // RULE 3: Authenticate FIRST before attaching Firestore listeners
+        if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
+          const cred = await signInWithCustomToken(auth, __initial_auth_token);
+          currentUser = cred.user;
+        } else {
+          const cred = await signInAnonymously(auth);
+          currentUser = cred.user;
+        }
+
+        if (!currentUser) return;
+        isCloudConnected = true;
+
+        badge.className = 'flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold bg-emerald-500/15 text-emerald-500 border border-emerald-500/25';
+        badge.innerHTML = `<span class="w-2 h-2 rounded-full bg-emerald-500"></span><span class="hidden md:inline">Cloud Aktif</span><span class="md:hidden">Online</span>`;
+
+        // Listen to Class Settings
+        const settingsRef = doc(db, 'artifacts', appId, 'public', 'data', 'settings', 'classInfo');
+        onSnapshot(settingsRef, (snap) => {
+          if (snap.exists() && snap.data().className) {
+            state.className = snap.data().className;
+            document.getElementById('class-name-input').value = state.className;
+          }
+        }, (err) => console.warn('Settings listener:', err));
+
+        // Listen to Students Collection (RULE 1 & 2)
+        const studentsCol = collection(db, 'artifacts', appId, 'public', 'data', 'students');
+        onSnapshot(studentsCol, (snapshot) => {
+          state.students = snapshot.docs.map((d) => ({ id: d.id, ...d.data() }));
+          renderAllUI();
+        }, (err) => {
+          console.error('Students listener error:', err);
+          showToast('Izin baca Firestore belum aktif. Periksa Rules Firebase.', 'error');
+        });
+
+        // Listen to Attendance Collection
+        const attendanceCol = collection(db, 'artifacts', appId, 'public', 'data', 'attendance');
+        onSnapshot(attendanceCol, (snapshot) => {
+          snapshot.docs.forEach((d) => {
+            const data = d.data();
+            if (data && data.records) {
+              state.attendanceRecords[d.id] = data.records;
+            }
+          });
+          renderAllUI();
+        }, (err) => console.warn('Attendance listener:', err));
+
+        // Listen to Journals Collection
+        const journalsCol = collection(db, 'artifacts', appId, 'public', 'data', 'journals');
+        onSnapshot(journalsCol, (snapshot) => {
+          state.journals = snapshot.docs.map((d) => ({ id: d.id, ...d.data() }));
+          renderJournalList();
+        }, (err) => console.warn('Journals listener:', err));
+
       } catch (error) {
-        console.error("Firebase Init Error:", error);
-        badge.className = 'flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold bg-rose-500/15 text-rose-500 border border-rose-500/25';
-        badge.innerHTML = `<span class="w-2 h-2 rounded-full bg-rose-500"></span><span>Gagal Konek (${error.code || 'Cek Auth/Domain'})</span>`;
-        showToast(`Firebase Error: ${error.message}`, 'error');
-        loadDemoFallbackData();
+        console.error('Firebase Init Error:', error);
+        isCloudConnected = false;
+        badge.className = 'flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold bg-amber-500/15 text-amber-500 border border-amber-500/25';
+        badge.innerHTML = `<span class="w-2 h-2 rounded-full bg-amber-500"></span><span>Mode Lokal (${error.code || 'Cek Auth/Domain'})</span>`;
+        showToast('Berjalan dalam Mode Lokal. Aktifkan Anonymous Auth & Authorized Domain di Firebase.', 'info');
+        renderAllUI();
       }
     }
-// ... existing code ... -->
-    // Start Application safely whether window load has already fired or not
+
+    // Boot Application safely
     function bootApp() {
       initThreeClaw();
       animateLoop();
+      renderAllUI();
       initFirebase();
     }
 
